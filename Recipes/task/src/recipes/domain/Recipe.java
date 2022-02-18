@@ -9,10 +9,10 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 public class Recipe {
 
-    String name;
-    String description;
-    String ingredients;
-    String directions;
+    private String name;
+    private String description;
+    private String[] ingredients;
+    private String[] directions;
 
 
 }

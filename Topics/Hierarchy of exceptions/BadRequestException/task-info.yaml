@@ -1,0 +1,16 @@
+type: code
+files:
+- name: src/Main.java
+  visible: true
+  text: |-
+    // update the class
+    class BadRequestException extends ...{
+
+    }
+  learner_created: false
+feedback_link: https://hyperskill.org/learn/step/16171#comment
+status: Solved
+feedback:
+  message: <html>Correct solution</html>
+  time: Sun, 06 Feb 2022 11:57:46 UTC
+record: -1

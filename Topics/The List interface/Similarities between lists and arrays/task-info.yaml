@@ -1,0 +1,30 @@
+type: choice
+is_multiple_choice: true
+options:
+- text: ' can contain primitive types as their elements'
+- text: can dynamically change their size
+- text: ' can be iterated in a loop'
+- text: allow getting elements by indexes
+message_correct: Congratulations!
+message_incorrect: Incorrect solution
+files:
+- name: src/Task.java
+  visible: true
+  text: |
+    // You can experiment here, it won’t be checked
+
+    public class Task {
+      public static void main(String[] args) {
+        // put your code here
+      }
+    }
+  learner_created: false
+feedback_link: https://hyperskill.org/learn/step/2095#comment
+status: Solved
+feedback:
+  message: <html>Correct solution</html>
+  time: Thu, 10 Feb 2022 11:53:44 UTC
+record: -1
+selected_options:
+- 2
+- 3

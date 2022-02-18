@@ -1,0 +1,26 @@
+content:
+- Comments
+- Switch statement
+- Constructor
+- Instance methods
+- Interface
+- Threads as objects
+- Custom threads
+- The keyword super
+- Hiding and overriding
+- toString()
+- Hierarchy of exceptions
+- Thread management
+- Boxing and unboxing
+- Thread synchronization
+- Introduction to generic programming
+- Generics and Object
+- ArrayList
+- The Collections Framework overview
+- The List interface
+- The Set interface
+- The Map interface
+- Getting data from REST
+- Posting and deleting data via REST
+- HashMap
+- Exception handling

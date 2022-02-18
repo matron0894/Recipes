@@ -1,0 +1,33 @@
+type: choice
+is_multiple_choice: true
+options:
+- text: List&lt;Integer&gt; list = new ArrayList&lt;&gt;();
+- text: ' LinkedList&lt;Integer&gt; list = new ArrayList&lt;&gt;();'
+- text: LinkedList&lt;Integer&gt; list = new LinkedList&lt;&gt;(new ArrayList&lt;&gt;());
+- text: ArrayList&lt;Integer&gt; list = new ArrayList&lt;&gt;();
+- text: Collection&lt;Integer&gt; list = new ArrayList&lt;&gt;();
+message_correct: Congratulations!
+message_incorrect: Incorrect solution
+files:
+- name: src/Task.java
+  visible: true
+  text: |
+    // You can experiment here, it won’t be checked
+
+    public class Task {
+      public static void main(String[] args) {
+        // put your code here
+      }
+    }
+  learner_created: false
+feedback_link: https://hyperskill.org/learn/step/8400#comment
+status: Solved
+feedback:
+  message: <html>Correct solution</html>
+  time: Thu, 10 Feb 2022 11:54:53 UTC
+record: -1
+selected_options:
+- 0
+- 2
+- 3
+- 4
