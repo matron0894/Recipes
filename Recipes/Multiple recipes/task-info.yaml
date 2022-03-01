@@ -241,12 +241,9 @@ files:
         }
     }
   learner_created: true
-- name: src/recipes/service/IdGenerator.java
-  visible: true
-  learner_created: true
 feedback_link: https://hyperskill.org/learn/step/13089#comment
 status: Solved
 feedback:
   message: Congratulations!
   time: Fri, 18 Feb 2022 14:01:55 UTC
-record: -1
+record: 2

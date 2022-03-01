@@ -308,6 +308,80 @@ files:
         }
     }
   learner_created: false
+- name: src/recipes/domain/Recipe.java
+  visible: true
+  text: |
+    package recipes.domain;
+
+    import lombok.AllArgsConstructor;
+    import lombok.Data;
+    import lombok.NoArgsConstructor;
+
+    import java.util.List;
+
+    @Data
+    @NoArgsConstructor
+    @AllArgsConstructor
+    public class Recipe {
+
+        private String name;
+        private String description;
+        private List<String> ingredients;
+        private List<String> directions;
+
+
+    }
+  learner_created: true
+- name: src/recipes/controller/RecipeController.java
+  visible: true
+  text: |
+    package recipes.controller;
+
+    import org.springframework.beans.factory.annotation.Autowired;
+    import org.springframework.http.HttpStatus;
+    import org.springframework.http.ResponseEntity;
+    import org.springframework.web.bind.annotation.*;
+    import org.springframework.web.server.ResponseStatusException;
+    import recipes.domain.Recipe;
+    import recipes.service.IdRecipe;
+    import recipes.service.RecipeService;
+
+    import java.util.Optional;
+
+    @RestController
+    @RequestMapping("/api/recipe")
+    public class RecipeController {
+
+        private final RecipeService recipeService;
+
+        @Autowired
+        public RecipeController(RecipeService recipeService) {
+            this.recipeService = recipeService;
+        }
+
+        @GetMapping("/{id}")
+        public ResponseEntity<Recipe> getRecipe(@PathVariable int id) {
+            Optional<Recipe> recipe = recipeService.findById(id);
+            if (recipe.isEmpty())
+                throw new ResponseStatusException(HttpStatus.NOT_FOUND);
+            return new ResponseEntity<>(recipe.get(), HttpStatus.OK);
+        }
+
+        @PostMapping("/new")
+        public ResponseEntity<IdRecipe> saveRecipe(@RequestBody Recipe recipe) {
+            Integer id = recipeService.save(recipe);
+            IdRecipe dto = new IdRecipe(id);
+            return new ResponseEntity<>(dto, HttpStatus.OK);
+        }
+
+    }
+  learner_created: true
+- name: src/recipes/repos/RecipeRepository.java
+  visible: true
+  learner_created: true
 feedback_link: https://hyperskill.org/learn/step/13090#comment
-status: Unchecked
+status: Solved
+feedback:
+  message: Congratulations!
+  time: Tue, 01 Mar 2022 19:52:17 UTC
 record: -1
