@@ -3,7 +3,7 @@
  <head></head>
  <body>
   <p>As you already know, there are different ways to create a map filled with key-values pairs. Today it's time to take a good look at the <code class="language-java">HashMap</code>: an effective instrument that is probably the most popular implementation of the <code class="language-java">Map</code> interface. It provides very fast access to its elements and falls within the top ten questions at Java job interviews.</p> 
-  <h5 style="text-align: center;">How does it work?</h5> 
+  <h5 style="text-align: center;" id="how-does-it-work">How does it work?</h5> 
   <p>The <code class="language-java">HashMap</code> class represents a map backed by a <strong>hash table</strong>. To understand what it is let's start with the internal organization of <code class="language-java">HashMap</code>. </p> 
   <p>If you look inside <code class="language-java">HashMap</code> you will see that it's an array with <strong>buckets </strong>as its elements. The default size of such an array is 16.</p> 
   <p style="text-align: center;"><img alt="" height="120" src="https://ucarecdn.com/ca6461ac-bdb2-4186-9e4c-5ec70d0044c9/" width="734"></p> 
@@ -17,7 +17,7 @@
   <p>Now that <code class="language-java">HashMap</code> has decided which linked list will store your pair, it will check if this linked list is empty. If it is, your pair will be the start-element of that linked list. Otherwise, your pair will become a new tail.</p> 
   <p>Thanks to the hash function, this implementation provides <strong>constant-time</strong> performance for <code class="language-java">get</code> and <code class="language-java">put</code> methods! Constant-time means O(1) complexity. </p> 
   <p>Now that you've mastered the theory of the <code class="language-java">HashMap</code> organization, it's time to consider some examples.</p> 
-  <h5 style="text-align: center;">Time to play!</h5> 
+  <h5 style="text-align: center;" id="time-to-play">Time to play!</h5> 
   <p><img alt="" src="https://ucarecdn.com/b4a25cb4-b927-433a-acd4-0e21f5e22115/"></p> 
   <pre><code class="language-java">Map&lt;Integer, String&gt; characters = new HashMap&lt;&gt;();
 
@@ -67,7 +67,7 @@ System.out.println(characters.get(2000)); // Prince</code></pre>
   <p>Check, if there are a concrete key or a value inside of <code class="language-java">HashMap</code>:</p> 
   <pre><code class="language-java">System.out.println(characters.containsKey(1000)); // true
 System.out.println(characters.containsValue("Fairy Godmother")); // false</code></pre> 
-  <h5 style="text-align: center;">For the interview</h5> 
+  <h5 style="text-align: center;" id="for-the-interview">For the interview</h5> 
   <p>Let's consider some interesting moments. Firstly, you, as a software engineer, can choose what number of buckets will be in <code class="language-java">HashMap</code>. Remember, that the default initial capacity must be a power of two:</p> 
   <pre><code class="language-java">Map&lt;String, String&gt; map = new HashMap&lt;&gt;(32);</code></pre> 
   <p>Another important point is collisions. There is always a chance of a situation when two distinct keys will generate the same hash code. This situation is called a <strong>collision</strong>.</p> 
@@ -80,7 +80,7 @@ map.put("BBBBBB","Second");</code></pre>
   <p>If there are a lot of collisions in a <code class="language-java">HashMap</code> the complexity for <code class="language-java">get</code> and <code class="language-java">put</code> methods becomes <strong>O(n)</strong>.</p> 
   <p>Because of that, class <code class="language-java">HashMap</code> was upgraded. Since Java 8, it provides the <em>collision resolution mechanism</em>. If linked lists are too long then <code class="language-java">HashMap</code> changes their structure: all linked lists become balanced trees. The new complexity is <strong>O(log(n))</strong>.</p> 
   <p>Finally, it's important to note that <code class="language-java">HashMap</code> can change the number of buckets. If there are too many pairs in your buckets <code class="language-java">HashMap</code> will change its size to a bigger one. It will transfer all your previous elements to the new version of itself. That, unfortunately, will take some time. And the more elements there are the longer transferring will take.</p> 
-  <h5 style="text-align: center;">When to use it?</h5> 
+  <h5 style="text-align: center;" id="when-to-use-it">When to use it?</h5> 
   <p>The short answer to the question in the title is if you need to store key-value pairs and want the mutable implementation of the <code class="language-java">Map</code> interface. <code class="language-java">HashMap</code> class is often used in practice since it is highly optimized for accessing elements. Also, iteration over <code class="language-java">HashMap</code> is highly effective.</p> 
   <p>And what about the disadvantages? Well, nobody's perfect. There is no way to avoid collisions. The size of <code class="language-java">HashMap</code> may increase so that it will take some time to transfer all the elements.</p> 
   <p>At last, remember, that <code class="language-java">HashMap</code> class makes no guarantees as to the order of the map. It also does not guarantee that the order will remain constant over time.</p>

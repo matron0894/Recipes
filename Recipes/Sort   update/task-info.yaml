@@ -635,6 +635,124 @@ files:
         }
     }
   learner_created: false
+- name: src/recipes/domain/Recipe.java
+  visible: true
+  text: |
+    package recipes.domain;
+
+    import com.fasterxml.jackson.annotation.JsonIgnore;
+    import lombok.AllArgsConstructor;
+    import lombok.Data;
+    import lombok.NoArgsConstructor;
+
+    import javax.persistence.*;
+    import javax.validation.constraints.NotBlank;
+    import javax.validation.constraints.NotEmpty;
+    import javax.validation.constraints.Size;
+    import java.util.List;
+
+    @Data
+    @Entity
+    @NoArgsConstructor
+    @Table(name = "table_recipes")
+    public class Recipe {
+
+        public Recipe(String name, String description, List<String> ingredients, List<String> directions) {
+            this.name = name;
+            this.description = description;
+            this.ingredients = ingredients;
+            this.directions = directions;
+        }
+
+        @Id
+        @GeneratedValue(strategy = GenerationType.AUTO)
+        @Column(name = "recipe_id")
+        @JsonIgnore
+        private Long id;
+
+        @NotBlank
+        @NotEmpty
+        @Column(name = "name")
+        private String name;
+
+        @NotEmpty
+        @NotBlank
+        @Column(name = "description")
+        private String description;
+
+        @NotEmpty
+        @Size(min = 1)
+        @ElementCollection
+        @CollectionTable(name = "table_ingredients", joinColumns = @JoinColumn(name = "ingredient_id"))
+        @Column(name = "ingredients")
+        private List<String> ingredients;
+
+        @NotEmpty
+        @Size(min = 1)
+        @ElementCollection
+        @CollectionTable(name = "table_directions", joinColumns = @JoinColumn(name = "direction_id"))
+        @Column(name = "directions")
+        private List<String> directions;
+
+    }
+  learner_created: true
+- name: src/recipes/controller/RecipeController.java
+  visible: true
+  text: |
+    package recipes.controller;
+
+    import org.springframework.beans.factory.annotation.Autowired;
+    import org.springframework.http.HttpStatus;
+    import org.springframework.http.ResponseEntity;
+    import org.springframework.web.bind.annotation.*;
+    import recipes.domain.Recipe;
+    import recipes.service.IdRecipe;
+    import recipes.service.RecipeService;
+
+    import javax.validation.Valid;
+
+    @RestController
+    @RequestMapping("/api/recipe")
+    public class RecipeController {
+
+        private final RecipeService recipeService;
+
+        @Autowired
+        public RecipeController(RecipeService recipeService) {
+            this.recipeService = recipeService;
+        }
+
+        @PostMapping("/new")
+        public ResponseEntity<IdRecipe> createRecipe(@RequestBody @Valid Recipe recipe) {
+            return recipeService.saveRecipe(recipe);
+        }
+
+
+        @GetMapping("/{id}")
+        public ResponseEntity<Recipe> getRecipe(@PathVariable long id) {
+            return recipeService.findRecipeById(id);
+        }
+
+
+        @DeleteMapping("/{id}")
+        public ResponseEntity<HttpStatus> deleteRecipe(@PathVariable long id) {
+            return recipeService.deleteRecipeById(id);
+        }
+
+    }
+  learner_created: true
+- name: src/recipes/repos/RecipeRepository.java
+  visible: true
+  text: |
+    package recipes.repos;
+
+    import org.springframework.data.repository.CrudRepository;
+    import recipes.domain.Recipe;
+
+    public interface RecipeRepository extends CrudRepository<Recipe, Long> {
+
+    }
+  learner_created: true
 feedback_link: https://hyperskill.org/learn/step/13091#comment
 status: Unchecked
-record: -1
+record: 4

@@ -8,12 +8,12 @@ import org.springframework.web.server.ResponseStatusException;
 import recipes.domain.Recipe;
 import recipes.repos.RecipeRepository;
 
+import java.time.LocalTime;
 import java.util.Optional;
 
 @Service
 public class RecipeService {
-
-    private RecipeRepository recipeRepository;
+    private final RecipeRepository recipeRepository;
 
     @Autowired
     public RecipeService(RecipeRepository recipeRepository) {
@@ -21,16 +21,16 @@ public class RecipeService {
     }
 
 
-    public ResponseEntity<IdRecipe> saveRecipe(Recipe recipe) {
+    public ResponseEntity<String> saveRecipe(Recipe recipe) {
         try {
-            Recipe res = recipeRepository
+            Recipe newRecipe = recipeRepository
                     .save(new Recipe(recipe.getName(),
                             recipe.getDescription(),
                             recipe.getIngredients(),
                             recipe.getDirections()
                     ));
 
-            return new ResponseEntity<>(new IdRecipe(res.getId()), HttpStatus.OK);
+            return new ResponseEntity<>(String.format("{\"id\": %d}", newRecipe.getId()), HttpStatus.OK);
         } catch (Exception e) {
             return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
         }
@@ -40,10 +40,9 @@ public class RecipeService {
     public ResponseEntity<Recipe> findRecipeById(Long id) {
         Optional<Recipe> recipe = recipeRepository.findById(id);
         if (recipe.isEmpty())
-            throw new ResponseStatusException(HttpStatus.NOT_FOUND);
+            throw new ResponseStatusException(HttpStatus.NOT_FOUND, "Recipe not found for id = " + id);
         return new ResponseEntity<>(recipe.get(), HttpStatus.OK);
     }
-
 
 
     public ResponseEntity<HttpStatus> deleteRecipeById(Long id) {

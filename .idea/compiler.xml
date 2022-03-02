@@ -10,10 +10,13 @@
         </processorPath>
         <module name="Recipes1.Topics-The_List_interface-Split_a_list_into_sublists.test" />
         <module name="Recipes1.Topics-Comments-Select_all_correct_comments.test" />
+        <module name="Recipes1.Topics-LocalTime-Theory.test" />
         <module name="Recipes1.Topics-Generic_methods-Theory.main" />
+        <module name="Recipes1.Topics-LocalDateTime-Add_11_hours_and_print_the_date.test" />
         <module name="Recipes1.Topics-Bean_validation-Add_two_annotations-build-tmp.test" />
         <module name="Recipes1.Topics-Posting_and_deleting_data_via_REST-Return_query_parameter-build-classes-java.main" />
         <module name="Recipes1.Topics-toString__-Theory.test" />
+        <module name="Recipes1.Topics-The_utility_class_Collections-Collection_class_basics.main" />
         <module name="Recipes1.Topics-Comments-Theory.test" />
         <module name="Recipes1.Topics-Introduction_to_generic_programming-Pastry_packing_optimization.test" />
         <module name="Recipes1.Topics-Getting_data_from_REST-Add_annotations-build-reports-tests.main" />
@@ -31,6 +34,7 @@
         <module name="Recipes1.Topics-Introduction_to_generic_programming-Theory.test" />
         <module name="Recipes1.Topics-Thread_management-VeganPizza.main" />
         <module name="Recipes1.Topics-Bean_validation-Tasks-build-generated-sources-headers-java.main" />
+        <module name="Recipes1.Topics-The_utility_class_Collections-The_first_index_of_a_sublist.test" />
         <module name="Recipes1.Topics-Anonymous_classes-What_about_context.main" />
         <module name="Recipes1.Topics-Switch_statement-Direction.test" />
         <module name="Recipes1.Topics-The_List_interface-Theory.test" />
@@ -39,8 +43,11 @@
         <module name="Recipes1.Topics-Anonymous_classes-An_anonymous_class_with_three_methods.main" />
         <module name="Recipes1.Topics-Threads_as_objects-Getting_current_thread_info.main" />
         <module name="Recipes1.Topics-Lambda_expressions-Apply_function_to_all_elements.main" />
+        <module name="Recipes1.Topics-LocalDate-The_last_day_of_a_month.test" />
         <module name="Recipes1.Topics-Bean_validation-Add_two_annotations-build-test-results.main" />
         <module name="Recipes1.Topics-Constructor-Account_and_its_owner.main" />
+        <module name="Recipes1.Topics-The_utility_class_Collections-Sorting_sequences.main" />
+        <module name="Recipes1.Topics-LocalDate-10_days_before.test" />
         <module name="Recipes1.Topics-Thread_management-Ordering_the_execution_of_threads.main" />
         <module name="Recipes1.Topics-Getting_data_from_REST-Add_annotations-build-tmp.main" />
         <module name="Recipes1.Topics-The_List_interface-Select_correct_assignments.test" />
@@ -52,6 +59,8 @@
         <module name="Recipes1.Topics-Thread_synchronization-Two_methods,_two_statements.test" />
         <module name="Recipes1.Recipes-task-build-test-results.main" />
         <module name="Recipes1.Topics-Exception_handling-Improve_the_program-build-classes-java.main" />
+        <module name="Recipes1.Topics-LocalDate-Theory.main" />
+        <module name="Recipes1.Topics-LocalTime-Seconds_since_start_of_a_day.main" />
         <module name="Recipes1.Topics-Custom_threads-Statements.main" />
         <module name="Recipes1.Topics-Posting_and_deleting_data_via_REST-Return_query_parameter.test" />
         <module name="Recipes1.Topics-Anonymous_classes-String_reverser.main" />
@@ -59,12 +68,14 @@
         <module name="Recipes1.Topics-toString__-Convert_persons_and_patients_to_string.main" />
         <module name="Recipes1.Topics-toString__-Convert_vehicles_and_cars_to_string.test" />
         <module name="Recipes1.Topics-The_Set_interface-Theory.test" />
+        <module name="Recipes1.Topics-The_utility_class_Collections-Frequency_of_characters.main" />
         <module name="Recipes1.Topics-Custom_threads-The_order_of_lines.test" />
         <module name="Recipes1.Topics-Getting_data_from_REST-Theory.test" />
         <module name="Recipes1.Topics-Optional-Sum_up_optional_values.main" />
         <module name="Recipes1.Topics-Bean_validation-Tasks-build-tmp.test" />
         <module name="Recipes1.Topics-Posting_and_deleting_data_via_REST-Deleting_items-build-test-results.main" />
         <module name="Recipes1.util.test" />
+        <module name="Recipes1.Topics-The_utility_class_Collections-Rotating_table.main" />
         <module name="Recipes1.Topics-Getting_data_from_REST-Add_annotations-build-generated-sources-annotationProcessor-java.test" />
         <module name="Recipes1.Topics-Interface-Account_Service.main" />
         <module name="Recipes1.Topics-Lambda_expressions-Theory.main" />
@@ -74,7 +85,9 @@
         <module name="Recipes1.Topics-Exception_handling-Improve_the_program-build-generated-sources-annotationProcessor-java.test" />
         <module name="Recipes1.Topics-Switch_statement-Statements__1_.test" />
         <module name="Recipes1.Topics-Exception_handling-Implement_DELETE_endpoint-build-generated-sources-annotationProcessor-java.main" />
+        <module name="Recipes1.Topics-LocalDateTime-Whole_hours_between_two_date-time_pairs.test" />
         <module name="Recipes1.Topics-Introduction_to_generic_programming-Declaring_generic_classes.main" />
+        <module name="Recipes1.Topics-LocalDateTime-Theory.main" />
         <module name="Recipes1.Recipes-task-build-classes-java.test" />
         <module name="Recipes1.Topics-Bean_validation-Tasks-build-generated-sources-annotationProcessor-java.main" />
         <module name="Recipes1.Topics-Bean_validation-Add_two_annotations-build-generated-sources-annotationProcessor-java.test" />
@@ -82,6 +95,7 @@
         <module name="Recipes1.Topics-Functional_interfaces-Theory.test" />
         <module name="Recipes1.Topics-Generics_and_Object-What_is_a_type.main" />
         <module name="Recipes1.Topics-Posting_and_deleting_data_via_REST-Deleting_items.main" />
+        <module name="Recipes1.Topics-LocalDate-Print_dates_of_a_year_with_an_offset.main" />
         <module name="Recipes1.Topics-The_Collections_Framework_overview-Creating_instances.main" />
         <module name="Recipes1.Topics-Functional_interfaces-Ternary_predicate.test" />
         <module name="Recipes1.Topics-Bean_validation-@Size_vs_@Min_@Max.test" />
@@ -108,6 +122,7 @@
         <module name="Recipes1.Topics-The_keyword_super-Employees.test" />
         <module name="Recipes1.Topics-Getting_data_from_REST-Add_annotations-build-reports-tests.test" />
         <module name="Recipes1.Topics-Introduction_to_generic_programming-Creating_instances.main" />
+        <module name="Recipes1.Topics-The_utility_class_Collections-The_first_index_of_a_sublist.main" />
         <module name="Recipes1.Topics-Posting_and_deleting_data_via_REST-Return_query_parameter-build-tmp.test" />
         <module name="Recipes1.Topics-Bean_validation-Add_two_annotations.test" />
         <module name="Recipes1.Topics-Bean_validation-Validation_annotations.test" />
@@ -134,6 +149,7 @@
         <module name="Recipes1.Topics-The_List_interface-Select_correct_assignments.main" />
         <module name="Recipes1.Topics-HashMap-Advantages.main" />
         <module name="Recipes1.Topics-Instance_methods-Theory.test" />
+        <module name="Recipes1.Topics-The_utility_class_Collections-Non-existing_methods.test" />
         <module name="Recipes1.Topics-Threads_as_objects-Is_thread_daemon.test" />
         <module name="Recipes1.Topics-The_Map_interface-The_property_of_TreeMap.test" />
         <module name="Recipes1.Topics-Thread_management-VeganPizza.test" />
@@ -164,14 +180,19 @@
         <module name="Recipes1.Topics-Exception_handling-Improve_the_program-build-generated-sources-annotationProcessor-java.main" />
         <module name="Recipes1.Recipes-task-build-tmp.main" />
         <module name="Recipes1.Topics-Anonymous_classes-And_always_these_rules.main" />
+        <module name="Recipes1.Topics-LocalDate-Theory.test" />
+        <module name="Recipes1.Topics-LocalDateTime-Theory.test" />
         <module name="Recipes1.Topics-Posting_and_deleting_data_via_REST-Return_query_parameter-build-generated-sources-headers-java.test" />
         <module name="Recipes1.Topics-The_Map_interface-Creating_a_map.main" />
         <module name="Recipes1.Topics-Generics_and_Object-Theory.main" />
         <module name="Recipes1.Topics-Posting_and_deleting_data_via_REST-Deleting_items.test" />
+        <module name="Recipes1.Topics-The_utility_class_Collections-An_uncompiled_statement.test" />
         <module name="Recipes1.Topics-Hiding_and_overriding-Saying_animals.test" />
         <module name="Recipes1.Topics-Posting_and_deleting_data_via_REST-Deleting_items-build-generated-sources-headers-java.main" />
+        <module name="Recipes1.Topics-LocalTime-Same_time.test" />
         <module name="Recipes1.Topics-The_Collections_Framework_overview-Collection_interfaces.main" />
         <module name="Recipes1.Topics-The_List_interface-Similarities_between_lists_and_arrays.main" />
+        <module name="Recipes1.Topics-LocalDate-LocalDate_class.main" />
         <module name="Recipes1.Topics-The_Map_interface-Displaying_pairs.main" />
         <module name="Recipes1.Topics-Switch_statement-Theory.main" />
         <module name="Recipes1.Topics-Exception_handling-Improve_the_program-build-reports-tests.test" />
@@ -190,13 +211,17 @@
         <module name="Recipes1.Topics-Comments-Select_all_correct_comments.main" />
         <module name="Recipes1.Topics-Hiding_and_overriding-Publications.main" />
         <module name="Recipes1.Topics-toString__-Time_as_a_string.test" />
+        <module name="Recipes1.Topics-LocalDateTime-Add_11_hours_and_print_the_date.main" />
         <module name="Recipes1.Topics-Boxing_and_unboxing-Safe_converting.main" />
         <module name="Recipes1.Topics-Thread_synchronization-Theory.main" />
+        <module name="Recipes1.Topics-LocalTime-LocalTime_constants.main" />
+        <module name="Recipes1.Topics-LocalTime-Some_hours_and_minutes_ago.main" />
         <module name="Recipes1.Topics-Custom_threads-String_processor.test" />
         <module name="Recipes1.Topics-Lambda_expressions-Max_of_two_integers.main" />
         <module name="Recipes1.Topics-Thread_management-Theory.test" />
         <module name="Recipes1.Topics-Exception_handling-Implement_DELETE_endpoint-build-reports-tests.main" />
         <module name="Recipes1.Topics-Bean_validation-Tasks-build-classes-java.test" />
+        <module name="Recipes1.Topics-LocalTime-Return_time_without_seconds.main" />
         <module name="Recipes1.Topics-Hierarchy_of_exceptions-Theory.main" />
         <module name="Recipes1.Topics-Bean_validation-Validation_annotations.main" />
         <module name="Recipes1.Topics-Introduction_to_generic_programming-Creating_instances.test" />
@@ -210,6 +235,7 @@
         <module name="Recipes1.Topics-Custom_threads-Numbers_filter.test" />
         <module name="Recipes1.Topics-toString__-Books_as_strings.main" />
         <module name="Recipes1.Topics-Default_methods-Add_new_default_method.main" />
+        <module name="Recipes1.Topics-LocalTime-Some_hours_and_minutes_ago.test" />
         <module name="Recipes1.Topics-Switch_statement-Removing_breaks.main" />
         <module name="Recipes1.Topics-The_keyword_super-Statements.test" />
         <module name="Recipes1.Topics-Hierarchy_of_exceptions-Base_class.main" />
@@ -219,6 +245,8 @@
         <module name="Recipes1.Topics-Posting_and_deleting_data_via_REST-Deleting_items-build-reports-tests.main" />
         <module name="Recipes1.Topics-Custom_threads-Theory.main" />
         <module name="Recipes1.Topics-The_Map_interface-The_property_of_TreeMap.main" />
+        <module name="Recipes1.Topics-The_utility_class_Collections-Non-existing_methods.main" />
+        <module name="Recipes1.Topics-The_utility_class_Collections-Frequency_of_characters.test" />
         <module name="Recipes1.Topics-Exception_handling-Improve_the_program-build-generated-sources-headers-java.main" />
         <module name="Recipes1.Topics-ArrayList-Creating_list.test" />
         <module name="Recipes1.Topics-The_keyword_super-Employees.main" />
@@ -243,12 +271,14 @@
         <module name="Recipes1.Topics-Generics_and_Object-Reusing_code_with_Object.main" />
         <module name="Recipes1.Topics-Custom_threads-Writing_a_thread_for_printing_numbers.main" />
         <module name="Recipes1.Topics-Introduction_to_generic_programming-Declaring_generic_classes_-_2.main" />
+        <module name="Recipes1.Topics-LocalDate-Convert_numbers_to_days.main" />
         <module name="Recipes1.Topics-Optional-The_address_book.test" />
         <module name="Recipes1.Topics-HashMap-How_many_buckets.main" />
         <module name="Recipes1.Topics-Optional-Theory.test" />
         <module name="Recipes1.Topics-The_Map_interface-Counting_words.main" />
         <module name="Recipes1.Topics-Posting_and_deleting_data_via_REST-Theory.test" />
         <module name="Recipes1.Topics-Generics_and_Object-Correct_the_usage_of_non-generic_class.main" />
+        <module name="Recipes1.Topics-LocalDate-The_last_day_of_a_month.main" />
         <module name="Recipes1.Topics-Anonymous_classes-String_reverser.test" />
         <module name="Recipes1.Topics-Constructor-Cookie.test" />
         <module name="Recipes1.Topics-Thread_synchronization-Methods.main" />
@@ -264,6 +294,7 @@
         <module name="Recipes1.Topics-Anonymous_classes-Theory.test" />
         <module name="Recipes1.Topics-toString__-Account.main" />
         <module name="Recipes1.Topics-Bean_validation-Request_parameter_validation.main" />
+        <module name="Recipes1.Topics-LocalTime-LocalTime_constants.test" />
         <module name="Recipes1.Topics-Exception_handling-Improve_the_program-build-reports-tests.main" />
         <module name="Recipes1.Topics-Anonymous_classes-And_always_these_rules.test" />
         <module name="Recipes1.Topics-Exception_handling-Implement_DELETE_endpoint-build-test-results.main" />
@@ -271,6 +302,8 @@
         <module name="Recipes1.Topics-Switch_statement-Theory.test" />
         <module name="Recipes1.Topics-Lambda_expressions-Expressions.main" />
         <module name="Recipes1.Topics-The_List_interface-Filtering_the_list.test" />
+        <module name="Recipes1.Topics-The_utility_class_Collections-Theory.main" />
+        <module name="Recipes1.Topics-LocalDate-30_years_before_and_after.test" />
         <module name="Recipes1.Topics-HashMap-When_to_use.main" />
         <module name="Recipes1.Recipes-task-build-generated-sources-annotationProcessor-java.test" />
         <module name="Recipes1.Topics-Custom_threads-Message_notifier_as_a_thread.main" />
@@ -288,6 +321,7 @@
         <module name="Recipes1.Topics-The_Map_interface-Getting_submaps.main" />
         <module name="Recipes1.Topics-Getting_data_from_REST-Add_annotations.main" />
         <module name="Recipes1.Topics-Hiding_and_overriding-Publications.test" />
+        <module name="Recipes1.Topics-LocalTime-Theory.main" />
         <module name="Recipes1.Topics-Generic_methods-The_first_element.test" />
         <module name="Recipes1.Topics-Functional_interfaces-Statements.main" />
         <module name="Recipes1.Topics-Posting_and_deleting_data_via_REST-Deleting_items-build-generated-sources-annotationProcessor-java.test" />
@@ -295,12 +329,15 @@
         <module name="Recipes1.Topics-Generics_and_Object-Theory.test" />
         <module name="Recipes1.Topics-The_Collections_Framework_overview-Collections_properties.test" />
         <module name="Recipes1.Topics-Exception_handling-Implement_DELETE_endpoint.main" />
+        <module name="Recipes1.Topics-The_utility_class_Collections-An_uncompiled_statement.main" />
         <module name="Recipes1.Topics-Custom_threads-String_processor.main" />
         <module name="Recipes1.Topics-Hiding_and_overriding-Theory.main" />
         <module name="Recipes1.Topics-HashMap-Theory.test" />
         <module name="Recipes1.Topics-Comments-Theory.main" />
+        <module name="Recipes1.Topics-LocalTime-Same_time.main" />
         <module name="Recipes1.Topics-Constructor-Constructor_definition.test" />
         <module name="Recipes1.Topics-Switch_statement-Shape.main" />
+        <module name="Recipes1.Topics-LocalTime-Working_with_time.main" />
         <module name="Recipes1.Topics-Bean_validation-Add_two_annotations-build-reports-tests.main" />
         <module name="Recipes1.Topics-Generics_and_Object-Initialize_an_object_of_a_generic_class.test" />
         <module name="Recipes1.Topics-Switch_statement-Removing_breaks.test" />
@@ -324,6 +361,8 @@
         <module name="Recipes1.Topics-Bean_validation-Add_two_annotations-build-generated-sources-headers-java.test" />
         <module name="Recipes1.Topics-Generic_methods-Theory.test" />
         <module name="Recipes1.Topics-Introduction_to_generic_programming-Declaring_generic_classes_-_2.test" />
+        <module name="Recipes1.Topics-LocalDate-10_days_before.main" />
+        <module name="Recipes1.Topics-LocalDate-LocalDate_class.test" />
         <module name="Recipes1.Recipes-task-build-generated-sources-annotationProcessor-java.main" />
         <module name="Recipes1.Topics-Posting_and_deleting_data_via_REST-Deleting_items-build-classes-java.test" />
         <module name="Recipes1.Topics-The_Map_interface-Modifying_a_map.test" />
@@ -337,6 +376,8 @@
         <module name="Recipes1.Topics-Optional-Check_an_Optional_value.test" />
         <module name="Recipes1.Topics-Bean_validation-Add_two_annotations-build-test-results.test" />
         <module name="Recipes1.Topics-Getting_data_from_REST-Add_annotations-build-test-results.main" />
+        <module name="Recipes1.Topics-LocalDate-Convert_numbers_to_days.test" />
+        <module name="Recipes1.Topics-The_utility_class_Collections-Sorting_sequences.test" />
         <module name="Recipes1.Topics-Posting_and_deleting_data_via_REST-Return_query_parameter.main" />
         <module name="Recipes1.Topics-Exception_handling-Improve_the_program-build-tmp.main" />
         <module name="Recipes1.Topics-Custom_threads-Message_notifier_as_a_thread.test" />
@@ -348,12 +389,14 @@
         <module name="Recipes1.Topics-Anonymous_classes-Implement_Runnable.main" />
         <module name="Recipes1.Topics-Exception_handling-Implement_DELETE_endpoint-build-classes-java.test" />
         <module name="Recipes1.Topics-The_Map_interface-Creating_a_map.test" />
+        <module name="Recipes1.Topics-LocalTime-Return_time_without_seconds.test" />
         <module name="Recipes1.Topics-Switch_statement-Direction.main" />
         <module name="Recipes1.Topics-The_keyword_super-Statements.main" />
         <module name="Recipes1.Topics-Hierarchy_of_exceptions-Theory.test" />
         <module name="Recipes1.Topics-The_List_interface-Split_a_list_into_sublists.main" />
         <module name="Recipes1.Topics-Lambda_expressions-Statements.main" />
         <module name="Recipes1.Topics-Exception_handling-Advantages_of_a_basic_class.main" />
+        <module name="Recipes1.Topics-LocalDate-30_years_before_and_after.main" />
         <module name="Recipes1.Topics-Posting_and_deleting_data_via_REST-Return_query_parameter-build-generated-sources-annotationProcessor-java.test" />
         <module name="Recipes1.Topics-Functional_interfaces-Abstract_built-in_classes.main" />
         <module name="Recipes1.Topics-Interface-Theory.test" />
@@ -368,6 +411,7 @@
         <module name="Recipes1.Topics-Threads_as_objects-Theory.test" />
         <module name="Recipes1.Topics-Hiding_and_overriding-Unusual_overriding.main" />
         <module name="Recipes1.Topics-Getting_data_from_REST-Add_annotations-build-classes-java.test" />
+        <module name="Recipes1.Topics-The_utility_class_Collections-Rotating_table.test" />
         <module name="Recipes1.Topics-Bean_validation-Tasks-build-reports-tests.main" />
         <module name="Recipes1.Topics-Default_methods-Theory.main" />
         <module name="Recipes1.Topics-Generic_methods-The_first_element.main" />
@@ -380,18 +424,24 @@
         <module name="Recipes1.Topics-Instance_methods-Instance_method_and_its_class.test" />
         <module name="Recipes1.Topics-Lambda_expressions-Apply_function_to_all_elements.test" />
         <module name="Recipes1.Topics-Bean_validation-Add_two_annotations-build-generated-sources-annotationProcessor-java.main" />
+        <module name="Recipes1.Topics-The_utility_class_Collections-Theory.test" />
         <module name="Recipes1.Topics-Posting_and_deleting_data_via_REST-Return_query_parameter-build-tmp.main" />
         <module name="Recipes1.Topics-The_Collections_Framework_overview-Creating_instances.test" />
         <module name="Recipes1.Topics-Thread_synchronization-Multithreaded_counter.main" />
+        <module name="Recipes1.Topics-The_utility_class_Collections-Collection_class_basics.test" />
         <module name="Recipes1.Topics-Exception_handling-Implement_DELETE_endpoint-build-tmp.test" />
         <module name="Recipes1.Topics-The_keyword_super-Theory.test" />
+        <module name="Recipes1.Topics-LocalDate-Print_dates_of_a_year_with_an_offset.test" />
         <module name="Recipes1.Topics-The_List_interface-Filtering_the_list.main" />
         <module name="Recipes1.Topics-Boxing_and_unboxing-Theory.main" />
         <module name="Recipes1.Topics-Functional_interfaces-A_string_operator.main" />
+        <module name="Recipes1.Topics-LocalTime-Seconds_since_start_of_a_day.test" />
         <module name="Recipes1.Topics-Bean_validation-Add_two_annotations-build-reports-tests.test" />
+        <module name="Recipes1.Topics-LocalTime-Working_with_time.test" />
         <module name="Recipes1.Topics-Thread_management-Workers_in_programs.main" />
         <module name="Recipes1.Topics-Posting_and_deleting_data_via_REST-Deleting_items-build-reports-tests.test" />
         <module name="Recipes1.Topics-ArrayList-Creating_list.main" />
+        <module name="Recipes1.Topics-LocalDateTime-Whole_hours_between_two_date-time_pairs.main" />
         <module name="Recipes1.Topics-Posting_and_deleting_data_via_REST-Return_query_parameter-build-test-results.main" />
         <module name="Recipes1.Topics-toString__-Theory.main" />
         <module name="Recipes1.Topics-Getting_data_from_REST-Add_annotations.test" />
@@ -535,6 +585,23 @@
       <module name="Recipes1.Topics-Lambda_expressions-Production_of_all_numbers_in_the_range.main" target="11" />
       <module name="Recipes1.Topics-Lambda_expressions-Statements.main" target="11" />
       <module name="Recipes1.Topics-Lambda_expressions-Theory.main" target="11" />
+      <module name="Recipes1.Topics-LocalDate-10_days_before.main" target="11" />
+      <module name="Recipes1.Topics-LocalDate-30_years_before_and_after.main" target="11" />
+      <module name="Recipes1.Topics-LocalDate-Convert_numbers_to_days.main" target="11" />
+      <module name="Recipes1.Topics-LocalDate-LocalDate_class.main" target="11" />
+      <module name="Recipes1.Topics-LocalDate-Print_dates_of_a_year_with_an_offset.main" target="11" />
+      <module name="Recipes1.Topics-LocalDate-The_last_day_of_a_month.main" target="11" />
+      <module name="Recipes1.Topics-LocalDate-Theory.main" target="11" />
+      <module name="Recipes1.Topics-LocalDateTime-Add_11_hours_and_print_the_date.main" target="11" />
+      <module name="Recipes1.Topics-LocalDateTime-Theory.main" target="11" />
+      <module name="Recipes1.Topics-LocalDateTime-Whole_hours_between_two_date-time_pairs.main" target="11" />
+      <module name="Recipes1.Topics-LocalTime-LocalTime_constants.main" target="11" />
+      <module name="Recipes1.Topics-LocalTime-Return_time_without_seconds.main" target="11" />
+      <module name="Recipes1.Topics-LocalTime-Same_time.main" target="11" />
+      <module name="Recipes1.Topics-LocalTime-Seconds_since_start_of_a_day.main" target="11" />
+      <module name="Recipes1.Topics-LocalTime-Some_hours_and_minutes_ago.main" target="11" />
+      <module name="Recipes1.Topics-LocalTime-Theory.main" target="11" />
+      <module name="Recipes1.Topics-LocalTime-Working_with_time.main" target="11" />
       <module name="Recipes1.Topics-Optional-Check_an_Optional_value.main" target="11" />
       <module name="Recipes1.Topics-Optional-Create_an_Optional_value.main" target="11" />
       <module name="Recipes1.Topics-Optional-Sum_up_optional_values.main" target="11" />
@@ -586,6 +653,14 @@
       <module name="Recipes1.Topics-The_Set_interface-Output_elements.main" target="11" />
       <module name="Recipes1.Topics-The_Set_interface-Strict_superset.main" target="11" />
       <module name="Recipes1.Topics-The_Set_interface-Theory.main" target="11" />
+      <module name="Recipes1.Topics-The_utility_class_Collections-An_uncompiled_statement.main" target="11" />
+      <module name="Recipes1.Topics-The_utility_class_Collections-Collection_class_basics.main" target="11" />
+      <module name="Recipes1.Topics-The_utility_class_Collections-Frequency_of_characters.main" target="11" />
+      <module name="Recipes1.Topics-The_utility_class_Collections-Non-existing_methods.main" target="11" />
+      <module name="Recipes1.Topics-The_utility_class_Collections-Rotating_table.main" target="11" />
+      <module name="Recipes1.Topics-The_utility_class_Collections-Sorting_sequences.main" target="11" />
+      <module name="Recipes1.Topics-The_utility_class_Collections-The_first_index_of_a_sublist.main" target="11" />
+      <module name="Recipes1.Topics-The_utility_class_Collections-Theory.main" target="11" />
       <module name="Recipes1.Topics-Thread_management-Ordering_the_execution_of_threads.main" target="11" />
       <module name="Recipes1.Topics-Thread_management-Summing_with_threads.main" target="11" />
       <module name="Recipes1.Topics-Thread_management-Theory.main" target="11" />

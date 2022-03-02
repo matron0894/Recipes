@@ -1,9 +1,9 @@
 type: choice
 is_multiple_choice: true
 options:
+- text: you wish to have complexity O(1) for get() and put() methods
 - text: you want to store elements as key-value pairs
 - text: you need to sort elements and put them in order
-- text: you wish to have complexity O(1) for get() and put() methods
 message_correct: Congratulations!
 message_incorrect: Incorrect solution
 files:

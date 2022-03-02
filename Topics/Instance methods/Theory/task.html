@@ -3,7 +3,7 @@
  <head></head>
  <body>
   <p>As you know, a class is one of the fundamental concepts in Java. You develop the logic of a program by creating fields and methods inside classes. Fields describe an object's properties and methods describe what an object does. In this topic, we will go on discussing the nature of methods in Java. All methods can be divided into two groups: <em>instance </em>and<em> static</em>. We were mostly focused on the static ones previously, so now let's learn more about instance methods to better understand the differences between the two. </p> 
-  <h5>What's the difference?</h5> 
+  <h5 id="whats-the-difference">What's the difference?</h5> 
   <p>Let's look at the code below. Here we have class <code class="language-java">Human</code> with two fields and two methods. </p> 
   <pre><code class="language-java">class Human {
     String name;
@@ -20,7 +20,7 @@
   <p>Modifier <code class="language-java">public</code> isn't important for us now. It just means that other classes can also get access to our methods.</p> 
   <p>As you see, methods <code class="language-java">printStatic</code> and <code class="language-java">printInstance</code> have differences in declaration. When you see a method, you can easily understand: if there is a word <code class="language-java">static</code>, then the method is <strong>static</strong>; if there is no word <code class="language-java">static</code>, then the method is an <strong>instance </strong>one.</p> 
   <p>Now let's see what this really means!</p> 
-  <h5>Understanding: static and instance </h5> 
+  <h5 id="understanding-static-and-instance">Understanding: static and instance </h5> 
   <p>To invoke a static method we <em>don't need to create an object</em>. We just call the method with the class name.</p> 
   <pre><code class="language-java">public static void main(String[] args) {
 
@@ -39,7 +39,7 @@
     alice.printInstance(); // will print "It's an instance method"
 }</code></pre> 
   <p>So, we can say that an instance method is a method that belongs to <em>each</em> <em>object that we created</em> of the particular class. </p> 
-  <h5>Instance methods: features</h5> 
+  <h5 id="instance-methods-features">Instance methods: features</h5> 
   <p>Instance methods have a great advantage: they can access fields of the class.</p> 
   <p>To illustrate the feature, let's modify our class <code class="language-java">Human</code>. Again, we have one static method <code class="language-java">averageWorking</code> and one instance method <code class="language-java">work</code>.</p> 
   <pre><code class="language-java">class Human {
@@ -77,8 +77,8 @@
   </div>
   <p></p> 
   <p>Of course, instance methods can take arguments and return values just as you saw in the previous topics. Returning values can be of any type including the same type as the defined class.</p> 
-  <h5>Summary</h5> 
-  <p>In Java, every method should be declared within a class. The difference between the instance and the static methods lies whether they interact with an object or not. Let's recap:</p> 
+  <h5 id="summary">Summary</h5> 
+  <p>In Java, every method should be declared within a class. The difference between the instance and the static methods lies in whether they interact with an object or not. Let's recap:</p> 
   <ul> 
    <li>static method is associated with the class as a whole;</li> 
    <li>instance method can only be invoked through an <em>instance</em> of a class, so that you have to create an object first;</li> 

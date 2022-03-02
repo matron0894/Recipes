@@ -24,3 +24,14 @@ content:
 - Posting and deleting data via REST
 - HashMap
 - Exception handling
+- Anonymous classes
+- Default methods
+- Lambda expressions
+- Functional interfaces
+- Generic methods
+- Optional
+- Bean validation
+- LocalTime
+- LocalDate
+- LocalDateTime
+- The utility class Collections
