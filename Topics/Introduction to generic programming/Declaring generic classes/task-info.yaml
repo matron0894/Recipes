@@ -1,14 +1,5 @@
 type: choice
 is_multiple_choice: false
-options:
-- text: class (E)C { /* … */ }
-- text: class C(E) { /* … */ }
-- text: class C&lt;E&gt; { /* … */ }
-- text: class [E]C { /* ... */ }
-- text: class C[E] { /* … */ }
-- text: class C{E} { /* … */ }
-- text: class &lt;E&gt;C { /* … */ }
-- text: class {E}C { /* … */ }
 message_correct: Congratulations!
 message_incorrect: Incorrect solution
 files:

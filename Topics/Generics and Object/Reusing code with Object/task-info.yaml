@@ -1,10 +1,5 @@
 type: choice
 is_multiple_choice: false
-options:
-- text: String str = instance.get();
-- text: Integer num = (Integer) instance.get();
-- text: Object obj = instance.get();
-- text: String str = (String) instance.get();
 message_correct: Congratulations!
 message_incorrect: Incorrect solution
 files:

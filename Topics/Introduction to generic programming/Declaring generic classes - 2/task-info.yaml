@@ -1,11 +1,5 @@
 type: choice
 is_multiple_choice: false
-options:
-- text: class A(T) { /* … */ }
-- text: class A[T] { /* … */ }
-- text: class A { /* … */ }
-- text: class A{T} { /* … */ }
-- text: class A&lt;T&gt; { /* ... */ }
 message_correct: Congratulations!
 message_incorrect: Incorrect solution
 files:

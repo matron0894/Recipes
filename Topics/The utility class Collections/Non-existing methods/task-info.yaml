@@ -1,11 +1,5 @@
 type: choice
 is_multiple_choice: false
-options:
-- text: creating copies of collections
-- text: reversing and shuffling lists
-- text: summing all values in a collection
-- text: creating unmodifiable collections
-- text: adding new elements to a collection
 message_correct: Congratulations!
 message_incorrect: Incorrect solution
 files:

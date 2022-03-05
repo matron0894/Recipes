@@ -754,5 +754,206 @@ files:
     }
   learner_created: true
 feedback_link: https://hyperskill.org/learn/step/13091#comment
-status: Unchecked
+status: Failed
+feedback:
+  message: "Exception in test #1\n\nCannot start Spring application\n\norg.springframework.beans.factory.BeanCreationException:\
+    \ Error creating bean with name &#39;requestMappingHandlerMapping&#39; defined\
+    \ in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]:\
+    \ Invocation of init method failed; nested exception is java.lang.IllegalStateException:\
+    \ Ambiguous mapping. Cannot map &#39;recipeController&#39; method \nrecipes.controller.RecipeController#searchRecipesByCategory(String)\n\
+    to {GET [/api/recipe/search]}: There is already &#39;recipeController&#39; bean\
+    \ method\nrecipes.controller.RecipeController#searchRecipesByName(String) mapped.\r\
+    \n\tat org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1804)\r\
+    \n\tat org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620)\r\
+    \n\tat org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)\r\
+    \n\tat org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)\r\
+    \n\tat org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)\r\
+    \n\tat org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)\r\
+    \n\tat org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)\r\
+    \n\tat org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:944)\r\
+    \n\tat org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918)\r\
+    \n\tat org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)\r\
+    \n\tat org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145)\r\
+    \n\tat org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)\r\
+    \n\tat org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:434)\r\
+    \n\tat org.springframework.boot.SpringApplication.run(SpringApplication.java:338)\r\
+    \n\tat org.springframework.boot.SpringApplication.run(SpringApplication.java:1343)\r\
+    \n\tat org.springframework.boot.SpringApplication.run(SpringApplication.java:1332)\r\
+    \n\tat recipes.RecipesApplication.main(RecipesApplication.java:9)\n\nPlease find\
+    \ below the output of your program during this failed test.\n\n---\n\n.   ____\
+    \          _            __ _ _\n /\\\\ / ___&#39;_ __ _ _(_)_ __  __ _ \\ \\ \\\
+    \ \\\n( ( )\\___ | &#39;_ | &#39;_| | &#39;_ \\/ _` | \\ \\ \\ \\\n \\\\/  ___)|\
+    \ |_)| | | | | || (_| |  ) ) ) )\n  &#39;  |____| .__|_| |_|_| |_\\__, | / / /\
+    \ /\n =========|_|==============|___/=/_/_/_/\n :: Spring Boot ::            \
+    \    (v2.5.6)\n\n2022-03-05 22:56:31.875  INFO 6016 --- [    Test worker] recipes.RecipesApplication\
+    \               : Starting RecipesApplication using Java 17.0.1 on DESKTOP-L7B3B4M\
+    \ with PID 6016 (started by matro in C:\\Users\\matro\\Documents\\IdeaProjects\\\
+    Recipes1\\Recipes\\task)\n2022-03-05 22:56:31.878  INFO 6016 --- [    Test worker]\
+    \ recipes.RecipesApplication               : No active profile set, falling back\
+    \ to default profiles: default\n2022-03-05 22:56:33.998  INFO 6016 --- [    Test\
+    \ worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data\
+    \ JPA repositories in DEFAULT mode.\n2022-03-05 22:56:34.108  INFO 6016 --- [\
+    \    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data\
+    \ repository scanning in 71 ms. Found 1 JPA repository interfaces.\n2022-03-05\
+    \ 22:56:35.435  INFO 6016 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer\
+    \  : Tomcat initialized with port(s): 8881 (http)\n2022-03-05 22:56:35.466  INFO\
+    \ 6016 --- [    Test worker] o.apache.catalina.core.StandardService   : Starting\
+    \ service [Tomcat]\n2022-03-05 22:56:35.466  INFO 6016 --- [    Test worker] org.apache.catalina.core.StandardEngine\
+    \  : Starting Servlet engine: [Apache Tomcat/9.0.54]\n2022-03-05 22:56:35.606\
+    \  INFO 6016 --- [    Test worker] o.a.c.c.C.[Tomcat].[localhost].[/]       :\
+    \ Initializing Spring embedded WebApplicationContext\n2022-03-05 22:56:35.606\
+    \  INFO 6016 --- [    Test worker] w.s.c.ServletWebServerApplicationContext :\
+    \ Root WebApplicationContext: initialization completed in 3655 ms\n2022-03-05\
+    \ 22:56:35.802  INFO 6016 --- [    Test worker] com.zaxxer.hikari.HikariDataSource\
+    \       : HikariPool-1 - Starting...\n2022-03-05 22:56:36.208  INFO 6016 --- [\
+    \    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start\
+    \ completed.\n2022-03-05 22:56:36.223  INFO 6016 --- [    Test worker] o.s.b.a.h2.H2ConsoleAutoConfiguration\
+    \    : H2 console available at &#39;/h2&#39;. Database available at &#39;jdbc:h2:file:../recipes_db&#39;\n\
+    2022-03-05 22:56:36.927  INFO 6016 --- [    Test worker] o.hibernate.jpa.internal.util.LogHelper\
+    \  : HHH000204: Processing PersistenceUnitInfo [name: default]\n2022-03-05 22:56:37.052\
+    \  INFO 6016 --- [    Test worker] org.hibernate.Version                    :\
+    \ HHH000412: Hibernate ORM core version 5.4.32.Final\n2022-03-05 22:56:37.615\
+    \  INFO 6016 --- [    Test worker] o.hibernate.annotations.common.Version   :\
+    \ HCANN000001: Hibernate Commons Annotations {5.1.2.Final}\n2022-03-05 22:56:37.833\
+    \  INFO 6016 --- [    Test worker] org.hibernate.dialect.Dialect            :\
+    \ HHH000400: Using dialect: org.hibernate.dialect.H2Dialect\nHibernate: drop table\
+    \ if exists table_directions CASCADE \nHibernate: drop table if exists table_ingredients\
+    \ CASCADE \nHibernate: drop table if exists table_recipes CASCADE \nHibernate:\
+    \ drop sequence if exists hibernate_sequence\nHibernate: create sequence hibernate_sequence\
+    \ start with 1 increment by 1\nHibernate: create table table_directions (direction_id\
+    \ bigint not null, directions varchar(255))\nHibernate: create table table_ingredients\
+    \ (ingredient_id bigint not null, ingredients varchar(255))\nHibernate: create\
+    \ table table_recipes (recipe_id bigint not null, category varchar(255), description\
+    \ varchar(255), name varchar(255), date timestamp, primary key (recipe_id))\n\
+    Hibernate: alter table table_directions add constraint FKq7jfvm97hr48ksoynp77bby29\
+    \ foreign key (direction_id) references table_recipes\nHibernate: alter table\
+    \ table_ingredients add constraint FKkb0nk2jc8fm5nm6opde7xdxjo foreign key (ingredient_id)\
+    \ references table_recipes\n2022-03-05 22:56:38.802  INFO 6016 --- [    Test worker]\
+    \ o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation:\
+    \ [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]\n2022-03-05\
+    \ 22:56:38.817  INFO 6016 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean\
+    \ : Initialized JPA EntityManagerFactory for persistence unit &#39;default&#39;\n\
+    2022-03-05 22:56:39.913  WARN 6016 --- [    Test worker] JpaBaseConfiguration$JpaWebConfiguration\
+    \ : spring.jpa.open-in-view is enabled by default. Therefore, database queries\
+    \ may be performed during view rendering. Explicitly configure spring.jpa.open-in-view\
+    \ to disable this warning\n2022-03-05 22:56:40.273  WARN 6016 --- [    Test worker]\
+    \ ConfigServletWebServerApplicationContext : Exception encountered during context\
+    \ initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException:\
+    \ Error creating bean with name &#39;requestMappingHandlerMapping&#39; defined\
+    \ in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]:\
+    \ Invocation of init method failed; nested exception is java.lang.IllegalStateException:\
+    \ Ambiguous mapping. Cannot map &#39;recipeController&#39; method \nrecipes.controller.RecipeController#searchRecipesByCategory(String)\n\
+    to {GET [/api/recipe/search]}: There is already &#39;recipeController&#39; bean\
+    \ method\nrecipes.controller.RecipeController#searchRecipesByName(String) mapped.\n\
+    2022-03-05 22:56:40.273  INFO 6016 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean\
+    \ : Closing JPA EntityManagerFactory for persistence unit &#39;default&#39;\n\
+    2022-03-05 22:56:40.273  INFO 6016 --- [    Test worker] com.zaxxer.hikari.HikariDataSource\
+    \       : HikariPool-1 - Shutdown initiated...\n2022-03-05 22:56:40.288  INFO\
+    \ 6016 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1\
+    \ - Shutdown completed.\n2022-03-05 22:56:40.288  INFO 6016 --- [    Test worker]\
+    \ o.apache.catalina.core.StandardService   : Stopping service [Tomcat]\n2022-03-05\
+    \ 22:56:40.320  INFO 6016 --- [    Test worker] ConditionEvaluationReportLoggingListener\
+    \ : \n\nError starting ApplicationContext. To display the conditions report re-run\
+    \ your application with &#39;debug&#39; enabled.\n2022-03-05 22:56:40.351 ERROR\
+    \ 6016 --- [    Test worker] o.s.boot.SpringApplication               : Application\
+    \ run failed\n\norg.springframework.beans.factory.BeanCreationException: Error\
+    \ creating bean with name &#39;requestMappingHandlerMapping&#39; defined in class\
+    \ path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]:\
+    \ Invocation of init method failed; nested exception is java.lang.IllegalStateException:\
+    \ Ambiguous mapping. Cannot map &#39;recipeController&#39; method \nrecipes.controller.RecipeController#searchRecipesByCategory(String)\n\
+    to {GET [/api/recipe/search]}: There is already &#39;recipeController&#39; bean\
+    \ method\nrecipes.controller.RecipeController#searchRecipesByName(String) mapped.\n\
+    \tat org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1804)\
+    \ ~[spring-beans-5.3.12.jar:5.3.12]\n\tat org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620)\
+    \ ~[spring-beans-5.3.12.jar:5.3.12]\n\tat org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)\
+    \ ~[spring-beans-5.3.12.jar:5.3.12]\n\tat org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)\
+    \ ~[spring-beans-5.3.12.jar:5.3.12]\n\tat org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)\
+    \ ~[spring-beans-5.3.12.jar:5.3.12]\n\tat org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)\
+    \ ~[spring-beans-5.3.12.jar:5.3.12]\n\tat org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)\
+    \ ~[spring-beans-5.3.12.jar:5.3.12]\n\tat org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:944)\
+    \ ~[spring-beans-5.3.12.jar:5.3.12]\n\tat org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918)\
+    \ ~[spring-context-5.3.12.jar:5.3.12]\n\tat org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)\
+    \ ~[spring-context-5.3.12.jar:5.3.12]\n\tat org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145)\
+    \ ~[spring-boot-2.5.6.jar:2.5.6]\n\tat org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)\
+    \ ~[spring-boot-2.5.6.jar:2.5.6]\n\tat org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:434)\
+    \ ~[spring-boot-2.5.6.jar:2.5.6]\n\tat org.springframework.boot.SpringApplication.run(SpringApplication.java:338)\
+    \ ~[spring-boot-2.5.6.jar:2.5.6]\n\tat org.springframework.boot.SpringApplication.run(SpringApplication.java:1343)\
+    \ ~[spring-boot-2.5.6.jar:2.5.6]\n\tat org.springframework.boot.SpringApplication.run(SpringApplication.java:1332)\
+    \ ~[spring-boot-2.5.6.jar:2.5.6]\n\tat recipes.RecipesApplication.main(RecipesApplication.java:9)\
+    \ ~[main/:na]\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native\
+    \ Method) ~[na:na]\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)\
+    \ ~[na:na]\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\
+    \ ~[na:na]\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]\n\
+    \tat org.hyperskill.hstest.stage.SpringTest.startSpring(SpringTest.java:139) ~[hs-test-release-SNAPSHOT.jar:na]\n\
+    \tat org.hyperskill.hstest.stage.SpringTest.launchSpring(SpringTest.java:50) ~[hs-test-release-SNAPSHOT.jar:na]\n\
+    \tat org.hyperskill.hstest.testing.runner.SpringApplicationRunner.launchSpringBootApplication(SpringApplicationRunner.java:20)\
+    \ ~[hs-test-release-SNAPSHOT.jar:na]\n\tat org.hyperskill.hstest.testing.runner.SpringApplicationRunner.setUp(SpringApplicationRunner.java:35)\
+    \ ~[hs-test-release-SNAPSHOT.jar:na]\n\tat org.hyperskill.hstest.testing.TestRun.setUp(TestRun.java:70)\
+    \ ~[hs-test-release-SNAPSHOT.jar:na]\n\tat org.hyperskill.hstest.stage.StageTest.start(StageTest.java:111)\
+    \ ~[hs-test-release-SNAPSHOT.jar:na]\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native\
+    \ Method) ~[na:na]\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)\
+    \ ~[na:na]\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\
+    \ ~[na:na]\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]\n\
+    \tat org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)\
+    \ ~[junit-4.13.2.jar:4.13.2]\n\tat org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)\
+    \ ~[junit-4.13.2.jar:4.13.2]\n\tat org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)\
+    \ ~[junit-4.13.2.jar:4.13.2]\n\tat org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)\
+    \ ~[junit-4.13.2.jar:4.13.2]\n\tat org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)\
+    \ ~[junit-4.13.2.jar:4.13.2]\n\tat org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)\
+    \ ~[junit-4.13.2.jar:4.13.2]\n\tat org.junit.runners.BlockJUnit4ClassRunner$1.evaluate(BlockJUnit4ClassRunner.java:100)\
+    \ ~[junit-4.13.2.jar:4.13.2]\n\tat org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366)\
+    \ ~[junit-4.13.2.jar:4.13.2]\n\tat org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:103)\
+    \ ~[junit-4.13.2.jar:4.13.2]\n\tat org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:63)\
+    \ ~[junit-4.13.2.jar:4.13.2]\n\tat org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)\
+    \ ~[junit-4.13.2.jar:4.13.2]\n\tat org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)\
+    \ ~[junit-4.13.2.jar:4.13.2]\n\tat org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)\
+    \ ~[junit-4.13.2.jar:4.13.2]\n\tat org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)\
+    \ ~[junit-4.13.2.jar:4.13.2]\n\tat org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)\
+    \ ~[junit-4.13.2.jar:4.13.2]\n\tat org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)\
+    \ ~[junit-4.13.2.jar:4.13.2]\n\tat org.junit.runners.ParentRunner.run(ParentRunner.java:413)\
+    \ ~[junit-4.13.2.jar:4.13.2]\n\tat org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.runTestClass(JUnitTestClassExecutor.java:110)\
+    \ ~[na:na]\n\tat org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.execute(JUnitTestClassExecutor.java:58)\
+    \ ~[na:na]\n\tat org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.execute(JUnitTestClassExecutor.java:38)\
+    \ ~[na:na]\n\tat org.gradle.api.internal.tasks.testing.junit.AbstractJUnitTestClassProcessor.processTestClass(AbstractJUnitTestClassProcessor.java:62)\
+    \ ~[na:na]\n\tat org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.processTestClass(SuiteTestClassProcessor.java:51)\
+    \ ~[na:na]\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native\
+    \ Method) ~[na:na]\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)\
+    \ ~[na:na]\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\
+    \ ~[na:na]\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]\n\
+    \tat org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)\
+    \ ~[na:na]\n\tat org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)\
+    \ ~[na:na]\n\tat org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33)\
+    \ ~[na:na]\n\tat org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:94)\
+    \ ~[na:na]\n\tat jdk.proxy1/jdk.proxy1.$Proxy2.processTestClass(Unknown Source)\
+    \ ~[na:na]\n\tat org.gradle.api.internal.tasks.testing.worker.TestWorker$2.run(TestWorker.java:176)\
+    \ ~[na:na]\n\tat org.gradle.api.internal.tasks.testing.worker.TestWorker.executeAndMaintainThreadName(TestWorker.java:129)\
+    \ ~[na:na]\n\tat org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:100)\
+    \ ~[na:na]\n\tat org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:60)\
+    \ ~[na:na]\n\tat org.gradle.process.internal.worker.child.ActionExecutionWorker.execute(ActionExecutionWorker.java:56)\
+    \ ~[na:na]\n\tat org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:133)\
+    \ ~[na:na]\n\tat org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:71)\
+    \ ~[na:na]\n\tat worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)\
+    \ ~[gradle-worker.jar:na]\n\tat worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)\
+    \ ~[gradle-worker.jar:na]\nCaused by: java.lang.IllegalStateException: Ambiguous\
+    \ mapping. Cannot map &#39;recipeController&#39; method \nrecipes.controller.RecipeController#searchRecipesByCategory(String)\n\
+    to {GET [/api/recipe/search]}: There is already &#39;recipeController&#39; bean\
+    \ method\nrecipes.controller.RecipeController#searchRecipesByName(String) mapped.\n\
+    \tat org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.validateMethodMapping(AbstractHandlerMethodMapping.java:669)\
+    \ ~[spring-webmvc-5.3.12.jar:5.3.12]\n\tat org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:635)\
+    \ ~[spring-webmvc-5.3.12.jar:5.3.12]\n\tat org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.registerHandlerMethod(AbstractHandlerMethodMapping.java:332)\
+    \ ~[spring-webmvc-5.3.12.jar:5.3.12]\n\tat org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.registerHandlerMethod(RequestMappingHandlerMapping.java:395)\
+    \ ~[spring-webmvc-5.3.12.jar:5.3.12]\n\tat org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.registerHandlerMethod(RequestMappingHandlerMapping.java:76)\
+    \ ~[spring-webmvc-5.3.12.jar:5.3.12]\n\tat org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.lambda$detectHandlerMethods$2(AbstractHandlerMethodMapping.java:299)\
+    \ ~[spring-webmvc-5.3.12.jar:5.3.12]\n\tat java.base/java.util.LinkedHashMap.forEach(LinkedHashMap.java:721)\
+    \ ~[na:na]\n\tat org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.detectHandlerMethods(AbstractHandlerMethodMapping.java:297)\
+    \ ~[spring-webmvc-5.3.12.jar:5.3.12]\n\tat org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.processCandidateBean(AbstractHandlerMethodMapping.java:266)\
+    \ ~[spring-webmvc-5.3.12.jar:5.3.12]\n\tat org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.initHandlerMethods(AbstractHandlerMethodMapping.java:225)\
+    \ ~[spring-webmvc-5.3.12.jar:5.3.12]\n\tat org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.afterPropertiesSet(AbstractHandlerMethodMapping.java:213)\
+    \ ~[spring-webmvc-5.3.12.jar:5.3.12]\n\tat org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.afterPropertiesSet(RequestMappingHandlerMapping.java:206)\
+    \ ~[spring-webmvc-5.3.12.jar:5.3.12]\n\tat org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.lambda$invokeInitMethods$5(AbstractAutowireCapableBeanFactory.java:1854)\
+    \ ~[spring-beans-5.3.12.jar:5.3.12]\n\tat java.base/java.security.AccessController.doPrivileged(AccessController.java:712)\
+    \ ~[na:na]\n\tat org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1853)\
+    \ ~[spring-beans-5.3.12.jar:5.3.12]\n\tat org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1800)\
+    \ ~[spring-beans-5.3.12.jar:5.3.12]\n\t... 70 common frames omitted"
+  time: Sat, 05 Mar 2022 19:56:41 UTC
 record: 4

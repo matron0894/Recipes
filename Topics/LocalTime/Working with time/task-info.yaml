@@ -1,11 +1,5 @@
 type: choice
-is_multiple_choice: true
-options:
-- text: LocalTime.parse("00:20:15").minusSeconds(615)
-- text: LocalTime.parse("00:05").withMinute(5)
-- text: LocalTime.parse("23:50").plusMinutes(20)
-- text: LocalTime.parse("05:05").plusHours(5).plusMinutes(5)
-- text: LocalTime.parse("01:10:10").withSecond(0).minusHours(1);
+is_multiple_choice: false
 message_correct: Congratulations!
 message_incorrect: Incorrect solution
 files:

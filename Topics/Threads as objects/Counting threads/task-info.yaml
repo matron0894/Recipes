@@ -1,10 +1,5 @@
 type: choice
 is_multiple_choice: false
-options:
-- text: 'exactly one '
-- text: at least one
-- text: from one to number of processor cores
-- text: exactly number of processor cores
 message_correct: Congratulations!
 message_incorrect: Incorrect solution
 files:

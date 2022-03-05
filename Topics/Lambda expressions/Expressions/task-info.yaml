@@ -1,13 +1,5 @@
 type: choice
-is_multiple_choice: true
-options:
-- text: (x, y) =&gt; x + y
-- text: x -&gt; x
-- text: x, y -&gt; x + y
-- text: x =&gt; x
-- text: (z) -&gt; z
-- text: (x, y) -&gt; x + y
-- text: x := x
+is_multiple_choice: false
 message_correct: Congratulations!
 message_incorrect: Incorrect solution
 files:

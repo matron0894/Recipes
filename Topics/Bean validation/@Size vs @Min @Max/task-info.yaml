@@ -1,13 +1,5 @@
 type: choice
-is_multiple_choice: true
-options:
-- text: If the field is annotated with @Size is a String, the size of the string is
-    evaluated
-- text: If the field is annotated with @Max is a String, the size of the string is
-    evaluated
-- text: If the field is annotated with @Min is an int, field value should be greater
-    or equal to the min number
-- text: If the field is annotated with @Size is an int, the number of digits is evaluated
+is_multiple_choice: false
 message_correct: Congratulations!
 message_incorrect: Incorrect solution
 files:

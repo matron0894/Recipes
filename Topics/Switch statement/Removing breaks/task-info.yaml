@@ -1,11 +1,5 @@
 type: choice
 is_multiple_choice: false
-options:
-- text: Undefined
-- text: 0
-- text: 10
-- text: 20
-- text: 30
 message_correct: Congratulations!
 message_incorrect: Incorrect solution
 files:

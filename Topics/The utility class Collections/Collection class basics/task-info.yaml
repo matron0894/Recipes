@@ -1,11 +1,5 @@
 type: choice
-is_multiple_choice: true
-options:
-- text: The class Collections implements the interface Collection.
-- text: Some methods of the class Collections take collections as arguments.
-- text: To process collections you need to create an instance of the class Collections.
-- text: The class Collections consist of a lot of static methods for working with
-    collections.
+is_multiple_choice: false
 message_correct: Congratulations!
 message_incorrect: Incorrect solution
 files:

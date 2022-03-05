@@ -1,10 +1,5 @@
 type: choice
-is_multiple_choice: true
-options:
-- text: New news = new News("A title", "A text", new String[]{"PROGRAMMING", "JAVA"});
-- text: News news = new News("A title", "A text");
-- text: News news = new News();
-- text: New news = new News("A title");
+is_multiple_choice: false
 message_correct: Congratulations!
 message_incorrect: Incorrect solution
 files:

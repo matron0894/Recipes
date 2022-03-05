@@ -1,7 +1,6 @@
 package recipes.domain;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
@@ -9,6 +8,7 @@ import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.Size;
+import java.time.LocalDateTime;
 import java.util.List;
 
 @Data
@@ -17,8 +17,10 @@ import java.util.List;
 @Table(name = "table_recipes")
 public class Recipe {
 
-    public Recipe(String name, String description, List<String> ingredients, List<String> directions) {
+    public Recipe(String name, String category, LocalDateTime time, String description, List<String> ingredients, List<String> directions) {
         this.name = name;
+        this.category = category;
+        this.time = time;
         this.description = description;
         this.ingredients = ingredients;
         this.directions = directions;
@@ -31,9 +33,18 @@ public class Recipe {
     private Long id;
 
     @NotBlank
-    @NotEmpty
+    @NotEmpty(message = "Name is required field")
     @Column(name = "name")
     private String name;
+
+    @NotBlank
+    @NotEmpty(message = "Category is required field")
+    @Column(name = "category")
+    private String category;
+
+    @JsonIgnore
+    @Column(name = "date")
+    private LocalDateTime time;
 
     @NotEmpty
     @NotBlank

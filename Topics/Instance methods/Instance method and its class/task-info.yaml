@@ -1,11 +1,5 @@
 type: choice
-is_multiple_choice: true
-options:
-- text: Calling the same instance method for different objects of a class can produce
-    different result.
-- text: A class can have multiple instance methods.
-- text: An instance method can access values of the fields.
-- text: ' A class can have only a single instance method.'
+is_multiple_choice: false
 message_correct: Congratulations!
 message_incorrect: Incorrect solution
 files:

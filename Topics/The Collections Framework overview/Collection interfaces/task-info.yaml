@@ -1,14 +1,5 @@
 type: choice
-is_multiple_choice: true
-options:
-- text: Container
-- text: Collection
-- text: MultiMap
-- text: Deque
-- text: List
-- text: Set
-- text: Stack
-- text: Queue
+is_multiple_choice: false
 message_correct: Congratulations!
 message_incorrect: Incorrect solution
 files:

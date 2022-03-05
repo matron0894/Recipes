@@ -1,12 +1,5 @@
 type: choice
-is_multiple_choice: true
-options:
-- text: LocalTime.HOUR; // 01:00
-- text: LocalTime.MIDNIGHT; // 23:59
-- text: LocalTime.MIDDAY; // 12:00
-- text: LocalTime.MAX; // 23:59:59.999999999
-- text: LocalTime.MINUTE; // 00:01
-- text: LocalTime.MIN; // 00:00
+is_multiple_choice: false
 message_correct: Congratulations!
 message_incorrect: Incorrect solution
 files:

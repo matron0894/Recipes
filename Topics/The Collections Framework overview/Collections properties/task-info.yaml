@@ -1,10 +1,5 @@
 type: choice
-is_multiple_choice: true
-options:
-- text: Collections store primitive types
-- text: Collections are built-in in the language syntax, like arrays
-- text: Two collections can be compared using the equals method
-- text: Not all collections can dynamically change their size
+is_multiple_choice: false
 message_correct: Congratulations!
 message_incorrect: Incorrect solution
 files:

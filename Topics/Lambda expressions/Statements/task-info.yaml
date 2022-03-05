@@ -1,10 +1,5 @@
 type: choice
-is_multiple_choice: true
-options:
-- text: A lambda expression should always return a value.
-- text: A lambda expression can contain multiple statements within the body.
-- text: A lambda expression always has parameters.
-- text: If a lambda expression has only one argument, parentheses () are not mandatory.
+is_multiple_choice: false
 message_correct: Congratulations!
 message_incorrect: Incorrect solution
 files:

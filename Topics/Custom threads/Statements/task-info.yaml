@@ -1,11 +1,5 @@
 type: choice
 is_multiple_choice: false
-options:
-- text: We cannot invoke <b>thread.start()</b> multiple times
-- text: We cannot invoke <b>thread.run()</b> multiple times
-- text: If we call the method <b>thread.run()</b> it calls the method <b>start()</b>
-    of this instance
-- text: We cannot create any other instances of the class <b>Thread</b>
 message_correct: Congratulations!
 message_incorrect: Incorrect solution
 files:

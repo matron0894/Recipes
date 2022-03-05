@@ -1,14 +1,5 @@
 type: choice
-is_multiple_choice: true
-options:
-- text: ' If a thread executes <b>method1</b> of <b>instance1</b>, no other thread
-    can execute <b>method2</b> of the same instance'
-- text: ' If a thread executes <b>method1</b> of <b>instance1</b>, no other thread
-    can execute <b>method1</b> of <b>instance2</b>'
-- text: If a thread executes <b>method1</b> of <b>instance1</b>, it can invoke and
-    execute <b>method2</b> of the same instance
-- text: ' If a thread executes <b>method1</b> of <b>instance1</b>, no other thread
-    can execute <b>method2</b> of <b>instance2</b>'
+is_multiple_choice: false
 message_correct: Congratulations!
 message_incorrect: Incorrect solution
 files:

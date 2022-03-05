@@ -1,10 +1,5 @@
 type: choice
 is_multiple_choice: false
-options:
-- text: order of elements that is same as the order they were inserted
-- text: sorted order of elements according to the values
-- text: 'no order of the elements '
-- text: sorted order of elements according to the keys
 message_correct: Congratulations!
 message_incorrect: Incorrect solution
 files:

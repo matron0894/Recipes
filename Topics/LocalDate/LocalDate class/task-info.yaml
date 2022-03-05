@@ -1,11 +1,5 @@
 type: choice
 is_multiple_choice: false
-options:
-- text: It belongs to the package <b>java.date</b>
-- text: 'The numbers of months starts with 0 '
-- text: It is possible to create an instance of <b>LocalDate</b> from a string
-- text: It's a mutable class
-- text: LocalDate represents a single date in a <b>dd-MM-YYYY</b> format
 message_correct: Congratulations!
 message_incorrect: Incorrect solution
 files:
