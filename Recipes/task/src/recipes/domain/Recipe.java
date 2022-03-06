@@ -1,8 +1,10 @@
 package recipes.domain;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import lombok.AccessLevel;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import lombok.Setter;
 import org.hibernate.annotations.UpdateTimestamp;
 
 import javax.persistence.*;
@@ -27,18 +29,17 @@ public class Recipe {
     }
 
     @Id
+    @JsonIgnore
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "recipe_id")
-    @JsonIgnore
+    @Setter(AccessLevel.NONE)
     private Long id;
 
-    @NotBlank
-    @NotEmpty(message = "Name is required field")
+    @NotBlank(message = "name can not blank")
     @Column(name = "name")
     private String name;
 
-    @NotBlank
-    @NotEmpty(message = "Category is required field")
+    @NotBlank(message = "category can not blank")
     @Column(name = "category")
     private String category;
 
@@ -47,20 +48,19 @@ public class Recipe {
     @UpdateTimestamp
     private LocalDateTime date;
 
-    @NotEmpty
-    @NotBlank
+    @NotBlank(message = "description can not blank")
     @Column(name = "description")
     private String description;
 
-    @NotEmpty
-    @Size(min = 1)
+    @NotEmpty(message = "ingredients can not empty")
+    @Size(min = 1, message = "ingredients must >= 1")
     @ElementCollection
     @CollectionTable(name = "table_ingredients", joinColumns = @JoinColumn(name = "ingredient_id"))
     @Column(name = "ingredients")
     private List<String> ingredients;
 
-    @NotEmpty
-    @Size(min = 1)
+    @NotEmpty(message = "directions can not empty")
+    @Size(min = 1, message = "directions must >= 1")
     @ElementCollection
     @CollectionTable(name = "table_directions", joinColumns = @JoinColumn(name = "direction_id"))
     @Column(name = "directions")
