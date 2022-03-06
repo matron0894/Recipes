@@ -22,20 +22,23 @@ public class RecipeController {
     }
 
     @PostMapping("/new")
+    @ResponseBody
     public ResponseEntity<String> createRecipe( @Valid  @RequestBody Recipe recipe) {
         return recipeService.saveRecipe(recipe);
     }
 
 
     @GetMapping("/search")
-    public ResponseEntity<List<Recipe>> searchRecipesByName(@Valid @RequestParam String name) {
-        return recipeService.findRecipeByName(name);
+    @ResponseBody
+    public ResponseEntity<List<Recipe>> searchRecipesByName(@Valid @RequestParam(value = "name", required = false) String name,@Valid @RequestParam(value = "category", required = false) String category) {
+        return recipeService.searchByQueryParam(name, category);
     }
 
-    @GetMapping("/search")
-    public ResponseEntity<List<Recipe>> searchRecipesByCategory(@Valid @RequestParam String category) {
-        return recipeService.findRecipeByCategory(category);
-    }
+//    @GetMapping("/search")
+//    @ResponseBody
+//    public ResponseEntity<List<Recipe>> searchRecipesByCategory(@Valid @RequestParam("category") String category) {
+//        return recipeService.findRecipeByCategory(category);
+//    }
 
 
     @GetMapping("/{id}")

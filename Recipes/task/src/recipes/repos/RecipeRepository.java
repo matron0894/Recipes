@@ -8,6 +8,6 @@ import java.util.Optional;
 
 public interface RecipeRepository extends CrudRepository<Recipe, Long> {
 
-    Optional<ArrayList<Recipe>> findByNameIgnoreCaseOrderByTimeDesc(String name);
-    Optional<ArrayList<Recipe>> findByCategoryIgnoreCaseOrderByTimeDesc(String category);
+    Optional<ArrayList<Recipe>> findAllByNameContainingIgnoreCaseOrderByDateDesc(String name);
+    Optional<ArrayList<Recipe>> findByCategoryIgnoreCaseOrderByDateDesc(String category);
  }

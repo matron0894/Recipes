@@ -8,7 +8,6 @@ import org.springframework.web.server.ResponseStatusException;
 import recipes.domain.Recipe;
 import recipes.repos.RecipeRepository;
 
-import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -29,7 +28,7 @@ public class RecipeService {
             Recipe newRecipe = recipeRepository
                     .save(new Recipe(recipe.getName(),
                             recipe.getCategory(),
-                            LocalDateTime.now(),
+//                            LocalDateTime.now(),
                             recipe.getDescription(),
                             recipe.getIngredients(),
                             recipe.getDirections()
@@ -51,7 +50,7 @@ public class RecipeService {
 
 
     public ResponseEntity<List<Recipe>> findRecipeByName(String name) {
-        Optional<ArrayList<Recipe>> recipes = recipeRepository.findByNameIgnoreCaseOrderByTimeDesc(name);
+        Optional<ArrayList<Recipe>> recipes = recipeRepository.findAllByNameContainingIgnoreCaseOrderByDateDesc(name);
         List<Recipe> result;
         if (recipes.isEmpty()) result = Collections.emptyList();
         else result = recipes.get();
@@ -59,11 +58,25 @@ public class RecipeService {
     }
 
     public ResponseEntity<List<Recipe>> findRecipeByCategory(String category) {
-        Optional<ArrayList<Recipe>> recipes = recipeRepository.findByCategoryIgnoreCaseOrderByTimeDesc(category);
+        Optional<ArrayList<Recipe>> recipes = recipeRepository.findByCategoryIgnoreCaseOrderByDateDesc(category);
         List<Recipe> result;
         if (recipes.isEmpty()) result = Collections.emptyList();
         else result = recipes.get();
         return new ResponseEntity<>(result, HttpStatus.OK);
+    }
+
+
+    public ResponseEntity<List<Recipe>> searchByQueryParam(String name, String category) {
+        Optional<String> opName = Optional.ofNullable(name);
+        Optional<String> opCategory = Optional.ofNullable(category);
+        if (opName.isPresent() && opCategory.isPresent()) {
+            return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
+        } else if (!opName.isPresent() && !opCategory.isPresent()) {
+            return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
+        } else {
+            if (opName.isPresent()) return findRecipeByName(name);
+            else return findRecipeByCategory(category);
+        }
     }
 
 
@@ -73,7 +86,6 @@ public class RecipeService {
             Recipe newRec = oldRecipe.get();
             newRec.setName(recipe.getName());
             newRec.setCategory(recipe.getCategory());
-            newRec.setTime(LocalDateTime.now());
             newRec.setDescription(recipe.getDescription());
             newRec.setIngredients(recipe.getIngredients());
             newRec.setDirections(recipe.getDirections());
