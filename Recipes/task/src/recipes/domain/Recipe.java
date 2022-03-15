@@ -66,4 +66,9 @@ public class Recipe {
     @Column(name = "directions")
     private List<String> directions;
 
+
+    @ManyToOne
+    @JoinColumn(name = "user_id")
+    private Kitchener user;
+
 }
