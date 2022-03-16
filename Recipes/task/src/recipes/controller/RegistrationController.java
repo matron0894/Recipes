@@ -19,12 +19,10 @@ public class RegistrationController {
     UserService userService;
 
     @PostMapping("/api/register")
-    public ResponseEntity<HttpStatus> register(@Valid @RequestBody User user) {
-        // input validation omitted for brevity
+    public ResponseEntity<String> register(@Valid @RequestBody User user) {
         Optional<User> userFromDB = userService.findUser(user.getEmail());
-
         if (userFromDB.isEmpty()) userService.addNewUser(user);
-        else return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
+        else return new ResponseEntity<>(" Email already exists", HttpStatus.BAD_REQUEST);
 
         return new ResponseEntity<>(HttpStatus.OK);
     }

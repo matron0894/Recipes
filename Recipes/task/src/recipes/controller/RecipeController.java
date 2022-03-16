@@ -4,10 +4,14 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
+import org.springframework.security.core.annotation.AuthenticationPrincipal;
+import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.server.ResponseStatusException;
 import recipes.domain.Recipe;
+import recipes.security.UserDetailsServiceImpl;
 import recipes.service.RecipeService;
 
 import javax.validation.Valid;
@@ -23,19 +27,22 @@ import java.util.Optional;
 public class RecipeController {
 
     private final RecipeService recipeService;
+    private final UserDetailsServiceImpl userDetailsService;
 
     @Autowired
-    public RecipeController(RecipeService recipeService) {
+    public RecipeController(RecipeService recipeService, UserDetailsServiceImpl userDetailsService) {
         this.recipeService = recipeService;
+        this.userDetailsService = userDetailsService;
     }
 
     @PreAuthorize("isAuthenticated()")
     @PostMapping("new")
     @ResponseBody
-    public ResponseEntity<Map<String, Long>> createRecipe(@Valid @RequestBody Recipe recipe, Principal principal) {
+    public ResponseEntity<Map<String, Long>> createRecipe(@Valid @RequestBody Recipe recipe,
+                                                          @AuthenticationPrincipal UserDetails auth) {
         try {
-            String creator = principal.getName();
-            long id = recipeService.saveRecipe(recipe, creator);
+            recipe.setOwner(userDetailsService.getUserByEmail(auth.getUsername()));
+            long id = recipeService.saveRecipe(recipe);
             return new ResponseEntity<>(Map.of("id", id), HttpStatus.OK);
         } catch (Exception e) {
             return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
@@ -58,7 +65,8 @@ public class RecipeController {
 
     @PreAuthorize("isAuthenticated()")
     @GetMapping("{id}")
-    public ResponseEntity<Recipe> getRecipe(@PathVariable @Min(1) long id) {
+    //@ResponseStatus(HttpStatus.NO_CONTENT)
+    public ResponseEntity<Recipe> getRecipe(@PathVariable @Min(1L) long id) {
         Optional<Recipe> recipe = recipeService.findRecipeById(id);
         if (recipe.isEmpty())
             throw new ResponseStatusException(HttpStatus.NOT_FOUND, "Recipe not found for id = " + id);
@@ -70,18 +78,18 @@ public class RecipeController {
     @PutMapping("{id}")
     public ResponseEntity<HttpStatus> updateRecipe(@PathVariable long id,
                                                    @Valid @RequestBody Recipe newRecipe,
-                                                   Principal principal) {
-        String creatorName = principal.getName();
+                                                   @AuthenticationPrincipal UserDetails auth) {
+        String creatorName = auth.getUsername();
         Optional<Recipe> oldRecipe = recipeService.findRecipeById(id);
 
         if (oldRecipe.isEmpty()) return new ResponseEntity<>(HttpStatus.NOT_FOUND);
-        if (!creatorName.equals(oldRecipe.get().getCreator())) return new ResponseEntity<>(HttpStatus.FORBIDDEN);
+        if (!creatorName.equals(oldRecipe.get().getOwner().getEmail())) return new ResponseEntity<>(HttpStatus.FORBIDDEN);
 
         recipeService.updateRecipeById(id, newRecipe);
         return new ResponseEntity<>(HttpStatus.NO_CONTENT);
     }
 
-
+    //@ResponseStatus(HttpStatus.NO_CONTENT)
     @PreAuthorize("isAuthenticated()")
     @DeleteMapping("/{id}")
     public ResponseEntity<HttpStatus> deleteRecipe(@PathVariable @Min(1) long id, Principal principal) {
@@ -90,7 +98,7 @@ public class RecipeController {
         Optional<Recipe> delRecipe = recipeService.findRecipeById(id);
 
         if (delRecipe.isEmpty()) return new ResponseEntity<>(HttpStatus.NOT_FOUND);
-        if (!creatorName.equals(delRecipe.get().getCreator())) return new ResponseEntity<>(HttpStatus.FORBIDDEN);
+        if (!creatorName.equals(delRecipe.get().getOwner().getEmail())) return new ResponseEntity<>(HttpStatus.FORBIDDEN);
 
         recipeService.deleteRecipeById(id);
         return new ResponseEntity<>(HttpStatus.NO_CONTENT);

@@ -24,11 +24,12 @@ public class User {
     @JsonIgnore
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Setter(AccessLevel.NONE)
+    @Column(name = "id", nullable = false)
     private Long id;
 
     @Email
     @Pattern(regexp = ".+@.+\\..+", message = "Incorrect format email")
-    @Column(name = "email", nullable = false, unique = true)
+    @Column(name = "email", nullable = false /*, unique = true*/)
     private String email;
 
     @NotBlank
@@ -36,11 +37,8 @@ public class User {
     @Column(name = "password")
     private String password;
 
-    @JsonIgnore
-    private String role;
 
-
-//    @OneToMany(mappedBy = "user")
-////    @JoinColumn(name = "user_id")
-//    private List<Recipe> recipes = new ArrayList<>();
+    @OneToMany(mappedBy = "owner")
+//    @JoinColumn(name = "user_id")
+    private List<Recipe> recipes = new ArrayList<>();
 }

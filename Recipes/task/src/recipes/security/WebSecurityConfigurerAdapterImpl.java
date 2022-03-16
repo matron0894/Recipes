@@ -11,7 +11,6 @@ import org.springframework.security.config.annotation.web.configuration.EnableWe
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
-import org.springframework.security.crypto.password.NoOpPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 
 @Configuration
@@ -33,24 +32,21 @@ public class WebSecurityConfigurerAdapterImpl extends WebSecurityConfigurerAdapt
 
     @Override
     public void configure(AuthenticationManagerBuilder auth) throws Exception {
-        auth.authenticationProvider(authProvider());
-        /*auth
-                .inMemoryAuthentication() // user store 2
-                .withUser("Admin").password("hardcoded").roles("USER")
-                .and().passwordEncoder(NoOpPasswordEncoder.getInstance());*/
+        auth
+                .authenticationProvider(authProvider());  //user store 1
+
+//        auth
+//                .inMemoryAuthentication() // user store 2
+//                .withUser("Admin").password("hardcoded").roles("USER")
+//                .and().passwordEncoder(NoOpPasswordEncoder.getInstance());
+
     }
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {  // для авторизации
         http.authorizeRequests()
-                .antMatchers("api/recipe/new")
-                .hasRole("ADMIN")
-                .mvcMatchers("api/register", "/h2**", "/h2-console")
-                .permitAll()
-//                .and()
-//                .authorizeRequests()
-//                .anyRequest()
-//                .authenticated()
+                .mvcMatchers("/actuator/shutdown", "api/recipe/new", "api/register", "/h2**", "/h2-console").permitAll()
+//                .anyRequest().authenticated()
                 .and()
                 .httpBasic();
 

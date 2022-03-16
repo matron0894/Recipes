@@ -20,8 +20,7 @@ public class RecipeService {
         this.recipeRepository = recipeRepository;
     }
 
-    public Long saveRecipe(Recipe recipe, String name) {
-        recipe.setCreator(name);
+    public Long saveRecipe(Recipe recipe) {
         recipeRepository.save(recipe);
         return recipe.getId();
     }

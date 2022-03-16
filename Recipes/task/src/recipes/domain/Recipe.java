@@ -54,25 +54,22 @@ public class Recipe {
 
     @NotEmpty(message = "ingredients can not empty")
     @Size(min = 1, message = "ingredients must >= 1")
-    @ElementCollection
-    @CollectionTable(name = "table_ingredients", joinColumns = @JoinColumn(name = "ingredient_id"))
+    @ElementCollection(fetch = FetchType.LAZY)
+    @CollectionTable(name = "table_ingredients", joinColumns = @JoinColumn(name = "recipe_id"))
     @Column(name = "ingredients")
     private List<String> ingredients;
 
 
     @NotEmpty(message = "directions can not empty")
     @Size(min = 1, message = "directions must >= 1")
-    @ElementCollection
-    @CollectionTable(name = "table_directions", joinColumns = @JoinColumn(name = "direction_id"))
+    @ElementCollection(fetch = FetchType.LAZY)
+    @CollectionTable(name = "table_directions", joinColumns = @JoinColumn(name = "recipe_id"))
     @Column(name = "directions")
     private List<String> directions;
 
 
-//    @ManyToOne(fetch = FetchType.LAZY, optional = false)
-//    @JoinColumn(name = "user_id")
-//    @JsonIgnore
-//    private User user;
-
     @JsonIgnore
-    private String creator;
+    @ManyToOne(fetch = FetchType.LAZY, optional = false)
+    @JoinColumn(name = "user_id", nullable = false)
+    private User owner;
 }
