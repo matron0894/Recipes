@@ -1,12 +1,12 @@
 package recipes.repos;
 
-import org.springframework.data.repository.CrudRepository;
-import recipes.domain.Kitchener;
+import org.springframework.data.jpa.repository.JpaRepository;
+import recipes.domain.User;
 
 import java.util.Optional;
 
-public interface UserRepository extends CrudRepository<Kitchener, Long> {
+public interface UserRepository extends JpaRepository<User, Long> {
 
-    Optional <Kitchener> findByEmail(String email);
+    Optional <User> findUserByEmail(String email);
 
 }

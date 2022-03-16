@@ -59,6 +59,7 @@ public class Recipe {
     @Column(name = "ingredients")
     private List<String> ingredients;
 
+
     @NotEmpty(message = "directions can not empty")
     @Size(min = 1, message = "directions must >= 1")
     @ElementCollection
@@ -67,8 +68,11 @@ public class Recipe {
     private List<String> directions;
 
 
-    @ManyToOne
-    @JoinColumn(name = "user_id")
-    private Kitchener user;
+//    @ManyToOne(fetch = FetchType.LAZY, optional = false)
+//    @JoinColumn(name = "user_id")
+//    @JsonIgnore
+//    private User user;
 
+    @JsonIgnore
+    private String creator;
 }
